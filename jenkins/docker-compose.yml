@@ -3,7 +3,7 @@ version: '3.5'
 services:
   jenkins:
     image: jenkins/jenkins:2.392
-    container_name: jenkins
+    container_name: ${CONTAINER_NAME}
     hostname: jenkins_network
     networks:
       - jenkins-network
