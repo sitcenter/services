@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:2.392
+    container_name: jenkins
+    hostname: jenkins_network
+    networks:
+      - jenkins-network
+    ports:
+      - 8080:8080
+      - 50000:50000
+    restart: always
