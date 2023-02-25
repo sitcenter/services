@@ -5,6 +5,7 @@ services:
     image: jenkins/jenkins:2.392
     container_name: ${CONTAINER_NAME}
     hostname: jenkins_network
+    user: root
     networks:
       - jenkins-network
     ports:
@@ -13,7 +14,6 @@ services:
     restart: always
     volumes:
       - ${VOLUME_JENKINS}:/var/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
 
 networks:
   jenkins-network:
