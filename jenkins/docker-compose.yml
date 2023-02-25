@@ -13,6 +13,7 @@ services:
     restart: always
     volumes:
       - ${VOLUME_JENKINS}:/var/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
 
 networks:
   jenkins-network:
