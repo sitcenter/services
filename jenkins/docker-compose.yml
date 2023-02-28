@@ -9,11 +9,11 @@ services:
     networks:
       - jenkins-network
     ports:
-      - 8080:8080
+      - 8081:8080
       - 50000:50000
     restart: always
     volumes:
-      - ${VOLUME_JENKINS}:/var/var/jenkins_home
+      - ./jenkins_home:/var/var/jenkins_home
 
 networks:
   jenkins-network:
