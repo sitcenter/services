@@ -13,7 +13,7 @@ services:
       - 50000:50000
     restart: always
     volumes:
-      - ./jenkins_home:/var/var/jenkins_home
+      - ${VOLUME_JENKINS}:/var/jenkins_home
 
 networks:
   jenkins-network:
