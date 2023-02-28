@@ -11,3 +11,7 @@ rm:
 .PHONY: up
 up:
 	docker compose up -d
+
+.PHONY: rm_volume
+rm_volume:
+	rm -rf ${VOLUME_JENKINS}
