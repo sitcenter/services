@@ -14,6 +14,7 @@ services:
     restart: always
     volumes:
       - ${VOLUME_JENKINS}:/var/jenkins_home
+      - ${VOLUME_JENKINS}/root:/root
 
 networks:
   jenkins-network:
